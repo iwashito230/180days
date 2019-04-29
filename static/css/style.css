@@ -8,8 +8,11 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 HH				Global
 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 body{
-	font-family: Raleway;
+	font-family: Raleway, 'M+ Type-1 (general-j) Thin';
     position: relative;
+}
+p, .self {
+  font-family: 'Haettenschweiler', sans-serif;
 }
 .top{
     display: none;
@@ -41,6 +44,9 @@ h1{
 	font-size: 40px;
 	text-transform: uppercase;
 	color: #fff;
+}
+h4, .li .self{
+  font-weight: 550;
 }
 ul{
     list-style: none;
@@ -183,23 +189,39 @@ HH				Header
 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 .header{
 	height: 100vh;
-	background: linear-gradient(50deg, rgb(81, 255, 182), rgb(87, 160, 255));
     padding: 45px 0px;
 }
-#logo {
-	font-size: 80px;
+
+.header, .nav {
+  background: linear-gradient(50deg, rgb(86, 250, 180), rgb(87, 160, 252));
+}
+#logo{
+	font-size: 5rem;
 	letter-spacing: 10px;
 	font-weight: 100;
 	color: white;
 	display: inline-block;
-	padding: 0px;
+	padding: 10px;
+    text-align: center;
     float: left;
+    letter-spacing: -0.1rem;
 }
+
 a#logo:hover{
 	text-decoration: none;
 }
-.strong{
+
+.strong, .kokoro{
 	font-weight: 400;
+}
+.kokoro { 
+  font-family: 'kokoro';
+}
+.fa-spinner-after::after {
+  font-size: .4em;
+  position: absolute;
+  bottom: 18px;
+  right: 1.8px;
 }
 .header img{
 	width: 100%;
@@ -209,14 +231,12 @@ a#logo:hover{
 }
 .fixed {
     position: fixed;
-    background: rgb(87, 160, 255);
+    background: linear-gradient(50deg, rgb(86, 250, 180), rgb(87, 160, 252));
     top: 0;
     z-index: 99;
     transition: 1s;
 }
-.fixed #logo{
-    font-size: 60px;
-}
+
 .fixed .nav-button{
     margin: 15px 0px;
 }
@@ -512,7 +532,7 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
     text-align: right;
 }
 .features-list ul.right{
-    padding: 40px;
+    padding: 5px, 30px, 30px;
     margin-left: -40px;
 }
 .features-list-left ul.left{
@@ -600,16 +620,17 @@ a.next{
 
 
 /*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-HH              Development Team
+HH              memo
 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
-#team{
+#memo{
     text-align: center;
     color: #333;
+    background: linear-gradient(50deg, rgb(86, 250, 180), rgb(87, 160, 252));
 }
-#team h2{
+#memo h2{
     color: #333;
 }
-#team img{
+#memo img{
     width: 200px;
     margin-bottom: 20px;
     position: relative;
@@ -623,26 +644,26 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
     position: absolute;
     margin: 0px auto;
 }
-#team .icon-m{
+#memo .icon-m{
     position: absolute;
     width: 30px;
     right: 0px;
     bottom: 0px;
 }
-#team .icon-p{
+#memo .icon-p{
     position: absolute;
     width: 30px;
     top: 185px;
     left: 185px;
 }
-#team .col-md-2:hover .img-hover{
+#memo .col-md-2:hover .img-hover{
     display: block;
     background: rgba(0, 0, 0, .7);
     top: 0;
     cursor: pointer;
     margin: 0px auto;
 }
-#team .col-md-2:hover .icon-m{
+#memo .col-md-2:hover .icon-m{
     display: block;
 }
 ul.social-icon{
@@ -669,11 +690,51 @@ ul.social-icon li a {
     color: white;
     border-color: white;
 }
+
+.memo-thumbnail {
+	width: 200px;
+	height: 200px;
+	padding-top: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+	margin: auto;
+	text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.memo-thumbnail:hover {
+    color: #e6e6fa;
+}
+.memo-p, .memo-b, .memo-y {
+  margin-bottom: 2em;
+}
+.memo-p {
+  background-color: #ffa3a3;
+}
+.memo-y {
+  background: #fdd35c;
+  margin-bottom: 2em;
+}
+ .memo-b{
+  background: #82cddd;
+}
+.memo-thumbnail::before {
+	position: absolute;
+	top: .5em;
+	left: 48%;
+	content: '\f08d';
+	font-family: 'FontAwesome';
+	bottom: 0;
+}
+.memo-thumbnail::before {
+  font-family: 'FontAwesome';
+  color: #FFF;
+}
 /*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-HH 				Testimonial
+HH 				Profile
 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 #testimonial{
-	background: linear-gradient(50deg, rgb(81, 255, 182), rgb(87, 160, 255));
+	background: linear-gradient(50deg, rgb(86, 250, 180), rgb(87, 160, 252));
     color: white;
     padding: 100px 0px;
     /*position: relative;*/
@@ -684,9 +745,9 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 #testimonial hr{
     border-color: white;
 }
-/*.item .test-img{
-    width: 100px;
-}*/
+.item .test-img{
+    width: 200px;
+}
 .owl-theme .owl-controls .owl-page span {
     border: 1px solid white;
     border-radius: 100%;
@@ -709,18 +770,6 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 }
 .owl-theme .owl-controls .active span{
     background-color: transparent;
-}
-.owl-theme .owl-controls .owl-page:nth-child(1) {
-    background: url(../img/test1.png) center ;
-    background-size: 100px 100px;
-}
-.owl-theme .owl-controls .owl-page:nth-child(2) {
-    background: url(../img/test2.png) center;
-    background-size: 100px 100px;
-}
-.owl-theme .owl-controls .owl-page:nth-child(3) {
-    background: url(../img/test3.png) center;
-    background-size: 100px 100px;
 }
 
 /*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
@@ -746,7 +795,8 @@ ul.pricing-table>li {
     position:relative;
     z-index:1;
     float:left;
-    width:30.66666%;
+    /*width:30.66666%;*/
+    width: 30%;
     background:#fff;
     color:#444;
     margin:0 4% 0 0;
@@ -789,6 +839,7 @@ ul.pricing-table h3 {
     border-radius:5px 5px 0 0;
     border-bottom:2px dotted #eee;
     color:#444;
+    font-size: 20px;
 }
 ul.pricing-table li.silver h3 {
     background:#eee;
@@ -896,6 +947,8 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
     height: 180px;
     width: 98%;
 }
+#gbtn { background: pink;
+}
 .btn-sub {
     width: 170px;
     height: 50px;
@@ -903,7 +956,7 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
     color: white;
     background-color: rgb(87, 160, 255);
     padding: 15px 10px;
-    margin: 10px 30px;
+    margin-top: 5em;
     border-color: rgb(87, 160, 255);
     margin-bottom: 45px;
     text-transform: uppercase;
@@ -1092,10 +1145,17 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
         font-size: 36px;
         margin-top: -20px;
     }
-	#logo{
-		font-size: 56px;
+	#logo, .row .col-md-11 .col-xs-10{
+        padding-top: 1rem;
+        font-size: 24px; 
 		text-align: left;
 	}
+  .fa-spinner-after::after {
+    position: absolute;
+    right: .3px;
+    bottom: .5em;
+  }
+  
 	.btn-download{
 		margin: 5px 0px;
 	}
@@ -1111,9 +1171,7 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
         margin: 0px;
         text-align: left;
     }
-    li.li i {
-        display: none;
-    }
+  
     #features img{
         display: none;
     }
@@ -1166,4 +1224,7 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
     .overlay .overlay-close {
         right: 50px;
     }
+}
+.row {
+    margin-top: 2.5em;
 }

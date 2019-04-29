@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from bottle import route, run
 from bottle import jinja2_template as template
 from bottle import static_file
