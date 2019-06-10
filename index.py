@@ -18,7 +18,7 @@ def js_dir(filename):
     return static_file(filename, root='./static/js')
 
 
-@route('/img/<filename>')
+@route('/img/<filename:path>')
 def img_dir(filename):
     return static_file(filename, root='./static/img')
 
